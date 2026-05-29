@@ -1,0 +1,134 @@
+[
+  {
+    "timestamp": 1780063453.2225814,
+    "time_str": "2026-05-29 22:04:13",
+    "action_type": "test_action",
+    "target": "test_target",
+    "risk_level": "LOW",
+    "success": true,
+    "message": "integration test",
+    "duration_ms": 0.0,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780063473.7002263,
+    "time_str": "2026-05-29 22:04:33",
+    "action_type": "app_launch",
+    "target": "chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]",
+    "risk_level": "LOW",
+    "success": true,
+    "message": "Attempted to open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'.",
+    "duration_ms": 810.8,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780063474.5228422,
+    "time_str": "2026-05-29 22:04:34",
+    "action_type": "system_control",
+    "target": "volume to of\n[Memory context: Q: who invented the telephone\nA: It's 10:04 PM.]",
+    "risk_level": "LOW",
+    "success": false,
+    "message": "Volume control error: 'AudioDevice' object has no attribute 'Activate'",
+    "duration_ms": 90.93,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780063474.7353308,
+    "time_str": "2026-05-29 22:04:34",
+    "action_type": "file_op",
+    "target": "a reminder\n[Memory context: Q: what day is it\nA: It's 10:04 PM.]",
+    "risk_level": "MEDIUM",
+    "success": false,
+    "message": "Create failed: [Errno 22] Invalid argument: \"a reminder\\n[Memory context: Q: what day is it\\nA: It's 10:04 PM.]\"",
+    "duration_ms": 2.8,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780063475.4235456,
+    "time_str": "2026-05-29 22:04:35",
+    "action_type": "app_launch",
+    "target": "chrome\n[Memory context: Q: open chrome\nA: Attempted to open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'.]",
+    "risk_level": "LOW",
+    "success": true,
+    "message": "Attempted to open 'chrome\n[Memory context: Q: open chrome\nA: Attempted to open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'.]'.",
+    "duration_ms": 11.74,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780063476.0878422,
+    "time_str": "2026-05-29 22:04:36",
+    "action_type": "system_control",
+    "target": "volume to of\n[Memory context: Q: minimize everything\nA: I understand you want me to do something, but I need more specifics.]",
+    "risk_level": "LOW",
+    "success": false,
+    "message": "Volume control error: 'AudioDevice' object has no attribute 'Activate'",
+    "duration_ms": 31.76,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780063476.8863916,
+    "time_str": "2026-05-29 22:04:36",
+    "action_type": "app_launch",
+    "target": "chrome\n[Memory context: Q: open chrome\nA: Attempted to open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'.]",
+    "risk_level": "LOW",
+    "success": true,
+    "message": "Attempted to open 'chrome\n[Memory context: Q: open chrome\nA: Attempted to open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'.]'.",
+    "duration_ms": 5.69,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780063477.7325742,
+    "time_str": "2026-05-29 22:04:37",
+    "action_type": "system_control",
+    "target": "volume to of\n[Memory context: Q: set volume to of\nA: I thought about it creatively, but didn't find a strong angle.\n\nVolume control error: 'AudioDevice' object has no attribute 'Activate']",
+    "risk_level": "LOW",
+    "success": false,
+    "message": "Volume control error: 'AudioDevice' object has no attribute 'Activate'",
+    "duration_ms": 32.25,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780063478.6445692,
+    "time_str": "2026-05-29 22:04:38",
+    "action_type": "app_launch",
+    "target": "chrome\n[Memory context: Q: open chrome\nA: Attempted to open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'.]",
+    "risk_level": "LOW",
+    "success": true,
+    "message": "Attempted to open 'chrome\n[Memory context: Q: open chrome\nA: Attempted to open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'.]'.",
+    "duration_ms": 6.07,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780063479.5688171,
+    "time_str": "2026-05-29 22:04:39",
+    "action_type": "system_control",
+    "target": "volume to of\n[Memory context: Q: set volume to of\nA: I thought about it creatively, but didn't find a strong angle.\n\nVolume control error: 'AudioDevice' object has no attribute 'Activate']",
+    "risk_level": "LOW",
+    "success": false,
+    "message": "Volume control error: 'AudioDevice' object has no attribute 'Activate'",
+    "duration_ms": 33.25,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780063480.547484,
+    "time_str": "2026-05-29 22:04:40",
+    "action_type": "app_launch",
+    "target": "chrome\n[Memory context: Q: open chrome\nA: Attempted to open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'.]",
+    "risk_level": "LOW",
+    "success": true,
+    "message": "Attempted to open 'chrome\n[Memory context: Q: open chrome\nA: Attempted to open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'.]'.",
+    "duration_ms": 4.82,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780063481.5685592,
+    "time_str": "2026-05-29 22:04:41",
+    "action_type": "system_control",
+    "target": "volume to of\n[Memory context: Q: set volume to of\nA: I thought about it creatively, but didn't find a strong angle.\n\nVolume control error: 'AudioDevice' object has no attribute 'Activate']",
+    "risk_level": "LOW",
+    "success": false,
+    "message": "Volume control error: 'AudioDevice' object has no attribute 'Activate'",
+    "duration_ms": 32.47,
+    "undo_available": false
+  }
+]

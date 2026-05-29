@@ -1,0 +1,9 @@
+[
+  {
+    "query": "capital of France",
+    "wrong": "London",
+    "correct": "Paris",
+    "timestamp": 1780063491.19264,
+    "applied": false
+  }
+]

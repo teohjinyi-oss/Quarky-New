@@ -1,0 +1,18 @@
+[
+  {
+    "component": "classifier",
+    "examples": 10,
+    "duration_ms": 6.998777389526367,
+    "accuracy_before": 0.0,
+    "accuracy_after": 0.5,
+    "timestamp": 1780059575.6226053
+  },
+  {
+    "component": "classifier",
+    "examples": 20,
+    "duration_ms": 9.510993957519531,
+    "accuracy_before": 0.0,
+    "accuracy_after": 0.5,
+    "timestamp": 1780059577.2309718
+  }
+]

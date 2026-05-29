@@ -1,0 +1,154 @@
+{
+  "entries": [
+    {
+      "id": "a7e620dff248",
+      "content": "Q: hello\nA: I thought about it creatively, but didn't find a strong angle.",
+      "keywords": [
+        "q",
+        "hello",
+        "thought",
+        "creatively",
+        "didn't",
+        "find",
+        "strong",
+        "angle"
+      ],
+      "created_at": 1780059600.461613,
+      "expires_at": 1780146000.461613,
+      "source": "decision.memory_updater",
+      "metadata": {}
+    },
+    {
+      "id": "9f839a0b03ae",
+      "content": "Q: hello\nA: I thought about it creatively, but didn't find a strong angle.",
+      "keywords": [
+        "q",
+        "hello",
+        "thought",
+        "creatively",
+        "didn't",
+        "find",
+        "strong",
+        "angle"
+      ],
+      "created_at": 1780059600.4626153,
+      "expires_at": 1780146000.4626153,
+      "source": "session",
+      "metadata": {}
+    },
+    {
+      "id": "54b4a9a9708c",
+      "content": "Q: who are you\n[Memory context: Q: hello\nA: I thought about it creatively, but didn't find a strong angle.]\nA: I'm Quarky, your personal AI assistant. I run entirely on your machine \u2014 no cloud, no LLM. I think with two brain hemispheres: analytical for logic and creative for ideas.",
+      "keywords": [
+        "q",
+        "memory",
+        "context",
+        "q",
+        "hello",
+        "thought",
+        "creatively",
+        "didn't",
+        "find",
+        "strong",
+        "angle",
+        "i'm",
+        "quarky",
+        "personal",
+        "ai",
+        "assistant",
+        "run",
+        "entirely",
+        "machine",
+        "cloud",
+        "llm",
+        "think",
+        "two",
+        "brain",
+        "hemispheres",
+        "analytical",
+        "logic",
+        "creative",
+        "ideas"
+      ],
+      "created_at": 1780059600.4807243,
+      "expires_at": 1780146000.4807243,
+      "source": "decision.memory_updater",
+      "metadata": {}
+    },
+    {
+      "id": "0a906b8aa160",
+      "content": "Q: who are you\nA: I'm Quarky, your personal AI assistant. I run entirely on your machine \u2014 no cloud, no LLM. I think with two brain hemispheres: analytical for logic and creative for ideas.",
+      "keywords": [
+        "q",
+        "i'm",
+        "quarky",
+        "personal",
+        "ai",
+        "assistant",
+        "run",
+        "entirely",
+        "machine",
+        "cloud",
+        "llm",
+        "think",
+        "two",
+        "brain",
+        "hemispheres",
+        "analytical",
+        "logic",
+        "creative",
+        "ideas"
+      ],
+      "created_at": 1780059600.4887755,
+      "expires_at": 1780146000.4887755,
+      "source": "session",
+      "metadata": {}
+    },
+    {
+      "id": "b4b2a560ade9",
+      "content": "Q: cd quantum entanglement banana\nA: I thought about it creatively, but didn't find a strong angle.",
+      "keywords": [
+        "q",
+        "cd",
+        "quantum",
+        "entanglement",
+        "banana",
+        "thought",
+        "creatively",
+        "didn't",
+        "find",
+        "strong",
+        "angle"
+      ],
+      "created_at": 1780059600.5387952,
+      "expires_at": 1780146000.5387952,
+      "source": "decision.memory_updater",
+      "metadata": {}
+    },
+    {
+      "id": "2a5b84977f8f",
+      "content": "Q: xkcd quantum entanglement banana\nA: I thought about it creatively, but didn't find a strong angle.",
+      "keywords": [
+        "q",
+        "xkcd",
+        "quantum",
+        "entanglement",
+        "banana",
+        "thought",
+        "creatively",
+        "didn't",
+        "find",
+        "strong",
+        "angle"
+      ],
+      "created_at": 1780059600.5418015,
+      "expires_at": 1780146000.5418015,
+      "source": "session",
+      "metadata": {}
+    }
+  ],
+  "_meta": {
+    "description": "Temporary memory \u2014 auto-expiring entries",
+    "count": 6
+  }
+}

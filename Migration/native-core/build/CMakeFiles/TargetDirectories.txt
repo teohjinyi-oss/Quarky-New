@@ -1,0 +1,3 @@
+C:/Users/User/OneDrive/LouisAi/native-core/build/CMakeFiles/louis_ai_engine.dir
+C:/Users/User/OneDrive/LouisAi/native-core/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/User/OneDrive/LouisAi/native-core/build/CMakeFiles/ZERO_CHECK.dir

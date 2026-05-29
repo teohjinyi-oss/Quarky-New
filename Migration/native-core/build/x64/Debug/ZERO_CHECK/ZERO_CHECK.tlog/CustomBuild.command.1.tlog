@@ -1,0 +1,10 @@
+^C:\USERS\USER\ONEDRIVE\LOUISAI\NATIVE-CORE\BUILD\CMAKEFILES\41D20DCFA18A7A42FF267DED77887BEE\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/User/OneDrive/LouisAi/native-core -BC:/Users/User/OneDrive/LouisAi/native-core/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/User/OneDrive/LouisAi/native-core/build/louis_ai_native_core.slnx
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
