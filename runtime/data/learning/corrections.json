@@ -12,5 +12,12 @@
     "correct": "Paris",
     "timestamp": 1780141951.5414476,
     "applied": false
+  },
+  {
+    "query": "capital of France",
+    "wrong": "London",
+    "correct": "Paris",
+    "timestamp": 1780151585.3252928,
+    "applied": false
   }
 ]
