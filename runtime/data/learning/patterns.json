@@ -3,6 +3,8 @@
     "type": "question_template",
     "template": "what is {concept}",
     "examples": [
+      "what is Python",
+      "what is Python",
       "what is your name",
       "what is your name",
       "what is your name",
@@ -12,7 +14,7 @@
       "what is Python",
       "what is Python"
     ],
-    "confidence": 0.9000000000000004,
+    "confidence": 1.0,
     "use_count": 0,
     "created_at": 1780063472.794638
   },
@@ -24,9 +26,14 @@
       "tell me a joke",
       "tell me a joke",
       "tell me a joke",
+      "tell me a joke",
+      "tell me a joke",
+      "tell me a joke",
+      "tell me a joke",
+      "tell me a joke",
       "tell me a joke"
     ],
-    "confidence": 0.7500000000000002,
+    "confidence": 1.0,
     "use_count": 0,
     "created_at": 1780063474.2384627
   },
@@ -38,9 +45,14 @@
       "how does gravity work",
       "how does gravity work",
       "how does gravity work",
+      "how does gravity work",
+      "how does gravity work",
+      "how does gravity work",
+      "how does gravity work",
+      "how does gravity work",
       "how does gravity work"
     ],
-    "confidence": 0.7500000000000002,
+    "confidence": 1.0,
     "use_count": 0,
     "created_at": 1780063474.3585885
   }

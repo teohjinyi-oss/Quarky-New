@@ -38,6 +38,17 @@ FAST_MODE_THRESHOLD = 0.8      # confidence above this → fast path (single bra
 DEEP_MODE_THRESHOLD = 0.5      # confidence below this → deep path (both brains)
 MAX_INPUT_LENGTH_FAST = 100    # inputs shorter than this chars → fast mode candidate
 
+# ─── Multi-Agent Reasoning System ───────────────────────────
+# Contextual, multi-agent reasoning add-on. Keeps three independent signals:
+# correctness (truth), coherence (consistency), contextual value (task fit).
+REASONING = {
+    "enabled": True,                 # master switch for the reasoning stack
+    "agent_timeout": 5.0,            # seconds to wait for each agent
+    "belief_learning_rate": 0.3,     # gradual confidence revision step (0–1)
+    "coherence_overlap_threshold": 0.5,  # word overlap to treat claims as same topic
+    "context_selection_threshold": 0.5,  # min contextual value to select a path
+}
+
 # ─── Infrastructure: Transport ───────────────────────────────
 TRANSPORT = {
     "max_chunk_size": 4096,          # bytes per chunk for packer
