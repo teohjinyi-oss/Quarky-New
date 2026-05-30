@@ -28,6 +28,7 @@ Custom token-value intelligence engine, 3-tier memory, always-on voice, and .exe
 | **NLP Pipeline** | `nlp/` | Embeddings, intent classification, spell-check, entity extraction, context resolution |
 | **Memory** | `memory/` | Hot cache → vector search → graph store, with decay and eviction |
 | **Brain** | `core/` | Analytical (pattern matching, reasoning) + Creative (concept blending) |
+| **Multi-Agent Reasoning** | `core/reasoning/` | Parallel agents + coherence + belief state + contextual value selection |
 | **Decision Engine** | `decision/` | Evaluation, merging, output gating |
 | **Learning** | `learning/` | Feedback, corrections, pattern extraction, training, web learning |
 | **Voice** | `voice/` | Microphone, wake detection, STT, TTS, pipeline |
@@ -206,6 +207,54 @@ Quarky's intelligence is driven by a **specificity scoring** system — no LLMs,
 | **SG** | ≥ 0.40 | Specific query, general answer | "What's the meaning of life?" |
 | **GG** | < 0.40 | General query, general answer | "Hey" |
 
+## Multi-Agent Reasoning System
+
+An add-on reasoning stack (`core/reasoning/`) layered on top of the dual-brain
+pipeline. Specialised agents generate **parallel reasoning paths**, which are
+then judged by **three independent signals** rather than a single unified score:
+
+| Signal | Meaning | Produced by |
+|--------|---------|-------------|
+| **Correctness** | Truth validation | Logic + Evidence agent confidence |
+| **Coherence** | Consistency between paths | Coherence Layer |
+| **Contextual value** | Task-dependent usefulness | Contextual Evaluation Layer |
+
+### Layers
+
+1. **Agent Layer** (`agents.py`) — four independent agents each emit a structured
+   `AgentOutput` (claims, assumptions, evidence, confidence, reasoning trace):
+   - **Logic** — formal reasoning, correctness checking
+   - **Creativity** — hypothesis generation, exploration
+   - **Evidence** — supports claims with known data (memory-backed)
+   - **Memory** — retrieves past context and recurring patterns
+2. **Coherence Layer** (`coherence.py`) — flags contradictions and conflicting
+   assumptions between agents but **preserves** every valid perspective instead
+   of discarding disagreement.
+3. **Belief State Layer** (`belief_state.py`) — maintains a structured belief
+   representation across turns, revising confidence **gradually** (not binary)
+   as new evidence arrives.
+4. **Contextual Evaluation Layer** (`contextual_evaluation.py`) — classifies the
+   task type and applies a **value-based policy profile** to prioritise paths:
+
+   | Task type | Profile | Prioritised agents |
+   |-----------|---------|--------------------|
+   | Verification | `logic+evidence` | Logic + Evidence |
+   | Exploration | `creativity+exploration` | Creativity (+ Memory) |
+   | Explanation | `balanced` | All, weighted |
+   | Mixed | `preserve-multi-path` | Multiple paths kept |
+
+The `MultiAgentReasoningEngine` (`engine.py`) orchestrates the full flow and
+returns a `ReasoningOutcome` exposing all three signals separately, so reliable
+reasoning (accuracy, consistency) and exploratory reasoning (novelty) are never
+collapsed into one optimisation objective.
+
+```python
+from core.reasoning import MultiAgentReasoningEngine
+
+outcome = MultiAgentReasoningEngine().reason("Is the sky blue?")
+print(outcome.task_type, outcome.signals)
+```
+
 ## Tests
 
 ```bash
@@ -216,6 +265,7 @@ python -m pytest tests/ -q --tb=short
 python -m pytest tests/test_v2_gui.py -q         # GUI (19 tests)
 python -m pytest tests/test_v2_intelligence.py -q # Intelligence (13 tests)
 python -m pytest tests/test_v2_orchestrator.py -q # End-to-end (5 tests)
+python -m pytest tests/test_v2_reasoning.py -q    # Multi-agent reasoning (27 tests)
 ```
 
 ## Dependencies
