@@ -49,6 +49,17 @@ REASONING = {
     "context_selection_threshold": 0.5,  # min contextual value to select a path
 }
 
+# ─── Pluggable Generation Layer ─────────────────────────────
+# Optional, gated response enrichment. The rule/decision engine stays the
+# authority — generation runs only when the gate allows (low confidence / low
+# specificity). The default backend is deterministic and fully offline.
+GENERATION = {
+    "enabled": True,                 # master switch for response enrichment
+    "skip_above_confidence": 0.85,   # answers at/above this are delivered verbatim
+    "enrich_tiers": ["GS", "SG", "GG"],  # specificity tiers eligible for enrichment
+    "default_backend": "template",   # registered backend name to use by default
+}
+
 # ─── Infrastructure: Transport ───────────────────────────────
 TRANSPORT = {
     "max_chunk_size": 4096,          # bytes per chunk for packer

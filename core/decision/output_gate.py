@@ -80,6 +80,13 @@ def decide(spinal: SpinalResult) -> FinalOutput:
     # Step 7: Final formatting
     response = _format_response(merged, action_req, action_result)
 
+    # Step 7b: Optional, gated response enrichment (Phase 1).
+    # The decision engine remains the authority: enrichment runs only for plain
+    # brain responses (no action involved) and only when the confidence gate
+    # allows it, so exact/high-confidence answers are delivered verbatim.
+    if action_req is None and action_result is None:
+        response = _maybe_enrich(response, merged)
+
     return FinalOutput(
         response=response,
         confidence=merged.confidence,
@@ -132,6 +139,32 @@ def _format_response(merged: MergedResult, action: ActionRequest | None,
                     f"Confirm? (y/n)")
 
     return text
+
+
+def _maybe_enrich(text: str, merged: MergedResult) -> str:
+    """Gated, optional fluency enrichment via the pluggable generation layer.
+
+    Falls back silently to the original text if generation is unavailable or the
+    gate declines — the deterministic answer is never lost.
+    """
+    if not text:
+        return text
+    try:
+        from core.generation import GenerationRequest, generate, should_generate
+    except Exception:
+        return text
+
+    tier = merged.specificity_tier or "GG"
+    if not should_generate(tier, merged.confidence):
+        return text
+
+    result = generate(GenerationRequest(
+        query="",
+        answer=text,
+        tier=tier,
+        confidence=merged.confidence,
+    ))
+    return result.text or text
 
 
 def confirm_action(action_request: ActionRequest) -> ActionResult:
