@@ -20,11 +20,13 @@ Layers:
 
 from core.reasoning.types import (
     AgentOutput,
+    AgentCritique,
     BeliefState,
     CoherenceReport,
     ContextualEvaluation,
     ContextualScore,
     ContradictionFlag,
+    CritiqueReport,
     ReasoningOutcome,
     TaskType,
 )
@@ -43,17 +45,20 @@ from core.reasoning.contextual_evaluation import (
     ContextualEvaluator,
     detect_task_type,
 )
+from core.reasoning.critique import CritiqueLayer
 from core.reasoning.synthesizer import synthesize
 from core.reasoning.engine import MultiAgentReasoningEngine
 
 __all__ = [
     # types
     "AgentOutput",
+    "AgentCritique",
     "BeliefState",
     "CoherenceReport",
     "ContextualEvaluation",
     "ContextualScore",
     "ContradictionFlag",
+    "CritiqueReport",
     "ReasoningOutcome",
     "TaskType",
     # agents
@@ -69,6 +74,7 @@ __all__ = [
     "BeliefStateTracker",
     "ContextualEvaluator",
     "detect_task_type",
+    "CritiqueLayer",
     "synthesize",
     "MultiAgentReasoningEngine",
 ]

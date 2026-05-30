@@ -23,6 +23,7 @@ from core.reasoning.agents import ReasoningAgent
 from core.reasoning.belief_state import BeliefStateTracker
 from core.reasoning.coherence import CoherenceLayer
 from core.reasoning.contextual_evaluation import ContextualEvaluator
+from core.reasoning.critique import CritiqueLayer
 from core.reasoning.dispatcher import MultiAgentDispatcher
 from core.reasoning.synthesizer import synthesize
 from core.reasoning.types import AgentOutput, ReasoningOutcome, TaskType
@@ -56,6 +57,11 @@ class MultiAgentReasoningEngine:
         self.contextual = ContextualEvaluator(
             selection_threshold=_R.get("context_selection_threshold", 0.5)
         )
+        # Phase 2: optional self-critique / verification layer.
+        self.self_critique_enabled = _R.get("self_critique", True)
+        self.critique = CritiqueLayer(
+            verification_margin=_R.get("verification_margin", 0.15)
+        )
 
     def reason(
         self,
@@ -78,6 +84,12 @@ class MultiAgentReasoningEngine:
         # 4. Contextual evaluation — value-based selection
         contextual = self.contextual.evaluate(query, outputs, task_type)
 
+        # 4b. Self-critique / verification (Phase 2) — annotates paths and, for
+        # verification tasks, produces an explicit verdict. Never prunes paths.
+        critique = None
+        if self.self_critique_enabled:
+            critique = self.critique.review(outputs, coherence, contextual.task_type)
+
         # 5. Synthesis — preserve multiple paths for mixed tasks
         response = synthesize(outputs, coherence, contextual)
 
@@ -95,6 +107,7 @@ class MultiAgentReasoningEngine:
             contextual=contextual,
             belief_summary=touched,
             signals=signals,
+            critique=critique,
             metadata={"agent_count": len(outputs)},
         )
 

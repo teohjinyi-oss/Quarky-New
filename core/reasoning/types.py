@@ -120,6 +120,36 @@ class ContextualEvaluation:
 
 
 @dataclass
+class AgentCritique:
+    """A structured critique of one reasoning path.
+
+    Self-critique is what lets the reasoning stack *verify* itself instead of
+    trusting an agent's self-reported confidence. Each critique records concrete
+    strengths and weaknesses plus a revised confidence.
+    """
+    agent: str
+    strengths: list[str] = field(default_factory=list)
+    weaknesses: list[str] = field(default_factory=list)
+    revised_confidence: float = 0.0
+    verified: bool = False
+
+
+@dataclass
+class CritiqueReport:
+    """Result of the Critique / Verification Layer."""
+    critiques: list[AgentCritique] = field(default_factory=list)
+    verification_verdict: str = "not_applicable"   # supported | disputed | inconclusive | not_applicable
+    verification_confidence: float = 0.0
+    notes: list[str] = field(default_factory=list)
+
+    def for_agent(self, agent: str) -> "AgentCritique | None":
+        for c in self.critiques:
+            if c.agent == agent:
+                return c
+        return None
+
+
+@dataclass
 class ReasoningOutcome:
     """Final structured synthesis returned by the reasoning engine.
 
@@ -133,4 +163,5 @@ class ReasoningOutcome:
     contextual: ContextualEvaluation | None = None
     belief_summary: list[BeliefState] = field(default_factory=list)
     signals: dict[str, float] = field(default_factory=dict)  # correctness/coherence/contextual_value
+    critique: "CritiqueReport | None" = None
     metadata: dict[str, Any] = field(default_factory=dict)

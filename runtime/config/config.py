@@ -47,6 +47,8 @@ REASONING = {
     "belief_learning_rate": 0.3,     # gradual confidence revision step (0–1)
     "coherence_overlap_threshold": 0.5,  # word overlap to treat claims as same topic
     "context_selection_threshold": 0.5,  # min contextual value to select a path
+    "self_critique": True,           # Phase 2: self-critique + verification layer
+    "verification_margin": 0.15,     # decisiveness needed for a "supported" verdict
 }
 
 # ─── Pluggable Generation Layer ─────────────────────────────
