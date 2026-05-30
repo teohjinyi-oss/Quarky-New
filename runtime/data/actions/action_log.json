@@ -713,5 +713,181 @@
     "message": "Volume control unavailable. Install pycaw: pip install pycaw comtypes",
     "duration_ms": 0.17,
     "undo_available": false
+  },
+  {
+    "timestamp": 1780152210.7715528,
+    "time_str": "2026-05-30 14:43:30",
+    "action_type": "test_action",
+    "target": "test_target",
+    "risk_level": "LOW",
+    "success": true,
+    "message": "integration test",
+    "duration_ms": 0.0,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780152211.1970844,
+    "time_str": "2026-05-30 14:43:31",
+    "action_type": "app_launch",
+    "target": "chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]",
+    "risk_level": "LOW",
+    "success": false,
+    "message": "Could not open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'. Application not found.",
+    "duration_ms": 11.01,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780152211.364841,
+    "time_str": "2026-05-30 14:43:31",
+    "action_type": "app_launch",
+    "target": "day is it\n[Memory context: Q: open chrome\nA: It's 02:43 PM.\n\nCould not open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'. Application not found.]",
+    "risk_level": "LOW",
+    "success": false,
+    "message": "Could not open 'day is it\n[Memory context: Q: open chrome\nA: It's 02:43 PM.\n\nCould not open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'. Application not found.]'. Application not found.",
+    "duration_ms": 10.81,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780152211.4446328,
+    "time_str": "2026-05-30 14:43:31",
+    "action_type": "system_control",
+    "target": "a reminder\n[Memory context: Q: set volume to 50\nA: Here's what comes to mind: Set is like a key \u2014 it unlocks something that was always there. What if volume was invisible? What connects volume to everyday life?]",
+    "risk_level": "LOW",
+    "success": false,
+    "message": "Volume control unavailable. Install pycaw: pip install pycaw comtypes",
+    "duration_ms": 0.15,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780152211.5590274,
+    "time_str": "2026-05-30 14:43:31",
+    "action_type": "app_launch",
+    "target": "chrome\n[Memory context: Q: open chrome\nA: It's 02:43 PM.\n\nCould not open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'. Application not found.]",
+    "risk_level": "LOW",
+    "success": false,
+    "message": "Could not open 'chrome\n[Memory context: Q: open chrome\nA: It's 02:43 PM.\n\nCould not open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'. Application not found.]'. Application not found.",
+    "duration_ms": 10.66,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780152211.5978243,
+    "time_str": "2026-05-30 14:43:31",
+    "action_type": "app_launch",
+    "target": "day is it\n[Memory context: Q: what day is it\nA: It's 02:43 PM.\n\nCould not open 'day is it\n[Memory context: Q: open chrome\nA: It's 02:43 PM.\n\nCould not open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'. Application not found.]'. Application not found.]",
+    "risk_level": "LOW",
+    "success": false,
+    "message": "Could not open 'day is it\n[Memory context: Q: what day is it\nA: It's 02:43 PM.\n\nCould not open 'day is it\n[Memory context: Q: open chrome\nA: It's 02:43 PM.\n\nCould not open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'. Application not found.]'. Application not found.]'. Application not found.",
+    "duration_ms": 10.72,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780152211.6945562,
+    "time_str": "2026-05-30 14:43:31",
+    "action_type": "system_control",
+    "target": "volume to 50\n[Memory context: Q: set volume to 50\nA: Here's what comes to mind: Set is like a key \u2014 it unlocks something that was always there. What if volume was invisible? What connects volume to everyday life?]",
+    "risk_level": "LOW",
+    "success": false,
+    "message": "Volume control unavailable. Install pycaw: pip install pycaw comtypes",
+    "duration_ms": 0.19,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780152211.8342466,
+    "time_str": "2026-05-30 14:43:31",
+    "action_type": "app_launch",
+    "target": "chrome\n[Memory context: Q: open chrome\nA: It's 02:43 PM.\n\nCould not open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'. Application not found.]",
+    "risk_level": "LOW",
+    "success": false,
+    "message": "Could not open 'chrome\n[Memory context: Q: open chrome\nA: It's 02:43 PM.\n\nCould not open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'. Application not found.]'. Application not found.",
+    "duration_ms": 10.7,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780152211.9383655,
+    "time_str": "2026-05-30 14:43:31",
+    "action_type": "app_launch",
+    "target": "day is it\n[Memory context: Q: what day is it\nA: It's 02:43 PM.\n\nCould not open 'day is it\n[Memory context: Q: open chrome\nA: It's 02:43 PM.\n\nCould not open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'. Application not found.]'. Application not found.]",
+    "risk_level": "LOW",
+    "success": false,
+    "message": "Could not open 'day is it\n[Memory context: Q: what day is it\nA: It's 02:43 PM.\n\nCould not open 'day is it\n[Memory context: Q: open chrome\nA: It's 02:43 PM.\n\nCould not open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'. Application not found.]'. Application not found.]'. Application not found.",
+    "duration_ms": 10.9,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780152212.0155952,
+    "time_str": "2026-05-30 14:43:32",
+    "action_type": "system_control",
+    "target": "volume to 50\n[Memory context: Q: set volume to 50\nA: Here's what comes to mind: Set is like a key \u2014 it unlocks something that was always there. What if volume was invisible? What connects volume to everyday life?]",
+    "risk_level": "LOW",
+    "success": false,
+    "message": "Volume control unavailable. Install pycaw: pip install pycaw comtypes",
+    "duration_ms": 0.15,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780152212.3620095,
+    "time_str": "2026-05-30 14:43:32",
+    "action_type": "app_launch",
+    "target": "chrome\n[Memory context: Q: open chrome\nA: It's 02:43 PM.\n\nCould not open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'. Application not found.]",
+    "risk_level": "LOW",
+    "success": false,
+    "message": "Could not open 'chrome\n[Memory context: Q: open chrome\nA: It's 02:43 PM.\n\nCould not open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'. Application not found.]'. Application not found.",
+    "duration_ms": 10.66,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780152212.4412265,
+    "time_str": "2026-05-30 14:43:32",
+    "action_type": "app_launch",
+    "target": "day is it\n[Memory context: Q: what day is it\nA: It's 02:43 PM.\n\nCould not open 'day is it\n[Memory context: Q: open chrome\nA: It's 02:43 PM.\n\nCould not open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'. Application not found.]'. Application not found.]",
+    "risk_level": "LOW",
+    "success": false,
+    "message": "Could not open 'day is it\n[Memory context: Q: what day is it\nA: It's 02:43 PM.\n\nCould not open 'day is it\n[Memory context: Q: open chrome\nA: It's 02:43 PM.\n\nCould not open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'. Application not found.]'. Application not found.]'. Application not found.",
+    "duration_ms": 10.8,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780152212.5093083,
+    "time_str": "2026-05-30 14:43:32",
+    "action_type": "system_control",
+    "target": "volume to 50\n[Memory context: Q: set volume to 50\nA: Here's what comes to mind: Set is like a key \u2014 it unlocks something that was always there. What if volume was invisible? What connects volume to everyday life?]",
+    "risk_level": "LOW",
+    "success": false,
+    "message": "Volume control unavailable. Install pycaw: pip install pycaw comtypes",
+    "duration_ms": 0.15,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780152212.741995,
+    "time_str": "2026-05-30 14:43:32",
+    "action_type": "app_launch",
+    "target": "chrome\n[Memory context: Q: open chrome\nA: It's 02:43 PM.\n\nCould not open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'. Application not found.]",
+    "risk_level": "LOW",
+    "success": false,
+    "message": "Could not open 'chrome\n[Memory context: Q: open chrome\nA: It's 02:43 PM.\n\nCould not open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'. Application not found.]'. Application not found.",
+    "duration_ms": 10.79,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780152212.8121805,
+    "time_str": "2026-05-30 14:43:32",
+    "action_type": "app_launch",
+    "target": "day is it\n[Memory context: Q: what day is it\nA: It's 02:43 PM.\n\nCould not open 'day is it\n[Memory context: Q: open chrome\nA: It's 02:43 PM.\n\nCould not open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'. Application not found.]'. Application not found.]",
+    "risk_level": "LOW",
+    "success": false,
+    "message": "Could not open 'day is it\n[Memory context: Q: what day is it\nA: It's 02:43 PM.\n\nCould not open 'day is it\n[Memory context: Q: open chrome\nA: It's 02:43 PM.\n\nCould not open 'chrome\n[Memory context: Q: what time is it\nA: My name is Quarky.]'. Application not found.]'. Application not found.]'. Application not found.",
+    "duration_ms": 10.75,
+    "undo_available": false
+  },
+  {
+    "timestamp": 1780152212.9345605,
+    "time_str": "2026-05-30 14:43:32",
+    "action_type": "system_control",
+    "target": "volume to 50\n[Memory context: Q: set volume to 50\nA: Here's what comes to mind: Set is like a key \u2014 it unlocks something that was always there. What if volume was invisible? What connects volume to everyday life?]",
+    "risk_level": "LOW",
+    "success": false,
+    "message": "Volume control unavailable. Install pycaw: pip install pycaw comtypes",
+    "duration_ms": 0.16,
+    "undo_available": false
   }
 ]

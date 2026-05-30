@@ -255,6 +255,71 @@ outcome = MultiAgentReasoningEngine().reason("Is the sky blue?")
 print(outcome.task_type, outcome.signals)
 ```
 
+### Self-Critique & Verification (Phase 2)
+
+The reasoning stack also **critiques its own paths** — a transparency feature no
+cloud LLM exposes. `core/reasoning/critique.py` derives concrete strengths and
+weaknesses per path and produces a *revised* confidence instead of trusting an
+agent's self-report. For `VERIFICATION` tasks it runs an explicit verification
+loop over the correctness agents (logic + evidence) and emits a verdict
+(`supported` / `disputed` / `inconclusive`). The result is attached to
+`ReasoningOutcome.critique`. Toggle via `REASONING["self_critique"]`.
+
+## Competitive Upgrade Systems
+
+These add-ons sharpen Quarky's edge as a **private, local, transparent** personal
+AI. All are zero-LLM, offline, and dependency-free.
+
+### Benchmark Harness (`benchmarks/`)
+
+A repeatable, offline scorecard so "is Quarky better?" becomes measurable.
+It scores intent accuracy, reasoning-signal quality, and latency, then compares
+against a documented reference bar.
+
+```bash
+python -m benchmarks          # human-readable scorecard
+python -m benchmarks --json   # machine-readable summary
+```
+
+```python
+from benchmarks import run_benchmark
+print(run_benchmark().render())
+```
+
+### Pluggable Generation Layer (`core/generation/`)
+
+An adapter boundary so a local generation backend can smooth Quarky's rigid
+template output **without** taking control from the rule engine. A confidence
+gate decides *whether* to enrich at all — high-confidence, specific answers are
+delivered verbatim; only low-specificity answers are rephrased. The default
+`TemplateBackend` is deterministic and offline; a heavier local model can be
+registered behind the same interface. Configured via the `GENERATION` block.
+
+### Memory Consolidation & Proactive Recall (`core/memory/consolidation.py`)
+
+Makes persistent memory feel alive: **proactive recall** surfaces relevant past
+memories unprompted (ranked by overlap + recency), and **consolidation** merges
+near-duplicate memories into compact entries with short summaries.
+
+### Unified Skills & Planner (`core/capabilities/skills.py`)
+
+One consistent `Skill` interface plus a `SkillPlanner` that chains skills into
+multi-step plans (split a request on `" then "` to feed each step's output into
+the next) — the foundation of agentic behaviour over Quarky's real OS reach.
+
+### Local Knowledge Cache (`core/knowledge/`)
+
+A private, offline, citation-aware knowledge store that grows as Quarky learns,
+so repeat questions are answered locally with a source citation:
+
+```python
+from core.knowledge import KnowledgeStore
+kb = KnowledgeStore()
+kb.add("The capital of France is Paris.", source="wikipedia")
+kb.answer("What is the capital of France?")
+# → "The capital of France is Paris. [source: wikipedia]"
+```
+
 ## Tests
 
 ```bash
@@ -266,6 +331,14 @@ python -m pytest tests/test_v2_gui.py -q         # GUI (19 tests)
 python -m pytest tests/test_v2_intelligence.py -q # Intelligence (13 tests)
 python -m pytest tests/test_v2_orchestrator.py -q # End-to-end (5 tests)
 python -m pytest tests/test_v2_reasoning.py -q    # Multi-agent reasoning (27 tests)
+
+# Competitive upgrade systems
+python -m pytest tests/test_benchmarks.py -q          # Benchmark harness (14 tests)
+python -m pytest tests/test_generation.py -q          # Generation layer (12 tests)
+python -m pytest tests/test_reasoning_critique.py -q  # Self-critique (9 tests)
+python -m pytest tests/test_memory_consolidation.py -q # Memory consolidation (10 tests)
+python -m pytest tests/test_skills.py -q              # Skills + planner (14 tests)
+python -m pytest tests/test_knowledge.py -q           # Knowledge cache (12 tests)
 ```
 
 ## Dependencies

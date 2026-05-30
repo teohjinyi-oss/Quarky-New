@@ -29,10 +29,49 @@
       "expires_at": 1780237986.084095,
       "source": "session",
       "metadata": {}
+    },
+    {
+      "id": "73478ae59764",
+      "content": "Q: open chrome\nA: \u26a1 Action: app_launch \u2192 chrome\nRisk Level: HIGH\nConfirm? (y/n)",
+      "keywords": [
+        "q",
+        "open",
+        "chrome",
+        "action",
+        "app_launch",
+        "chrome",
+        "risk",
+        "level",
+        "high",
+        "confirm",
+        "y/n"
+      ],
+      "created_at": 1780152213.6579196,
+      "expires_at": 1780238613.6579196,
+      "source": "session",
+      "metadata": {}
+    },
+    {
+      "id": "5f97ef417392",
+      "content": "Q: close it\nA: I thought about it creatively, but didn't find a strong angle.",
+      "keywords": [
+        "q",
+        "close",
+        "thought",
+        "creatively",
+        "didn't",
+        "find",
+        "strong",
+        "angle"
+      ],
+      "created_at": 1780152213.6592553,
+      "expires_at": 1780238613.6592553,
+      "source": "session",
+      "metadata": {}
     }
   ],
   "_meta": {
     "description": "Temporary memory \u2014 auto-expiring entries",
-    "count": 2
+    "count": 4
   }
 }
