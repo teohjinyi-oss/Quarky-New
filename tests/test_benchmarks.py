@@ -98,3 +98,20 @@ class TestScorecard:
                                         "latency": 0.0})
         # Against a zero bar Quarky should be at or ahead everywhere.
         assert all(e.delta >= 0.0 for e in card.entries)
+
+
+class TestCLI:
+    def test_main_table_output(self, capsys):
+        from benchmarks.__main__ import main
+        rc = main([])
+        out = capsys.readouterr().out
+        assert rc == 0
+        assert "Quarky Benchmark Scorecard" in out
+
+    def test_main_json_output(self, capsys):
+        from benchmarks.__main__ import main
+        rc = main(["--json"])
+        out = capsys.readouterr().out
+        assert rc == 0
+        loaded = json.loads(out)
+        assert "overall" in loaded and "entries" in loaded

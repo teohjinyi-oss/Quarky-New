@@ -1,58 +1,153 @@
 {
   "entries": [
     {
-      "id": "884f6c715cbd",
-      "content": "Q: what time is it\nA: It's 02:33 PM.",
+      "id": "d6605081b4e0",
+      "content": "Q: hello\nA: I thought about it creatively, but didn't find a strong angle.",
       "keywords": [
         "q",
-        "time",
-        "it's",
-        "02:33",
-        "pm"
+        "hello",
+        "thought",
+        "creatively",
+        "didn't",
+        "find",
+        "strong",
+        "angle"
       ],
-      "created_at": 1780151586.0837128,
-      "expires_at": 1780237986.0837128,
+      "created_at": 1780063501.960674,
+      "expires_at": 1780149901.960674,
       "source": "decision.memory_updater",
       "metadata": {}
     },
     {
-      "id": "96b4c475a387",
-      "content": "Q: what time is it\nA: It's 02:33 PM.",
+      "id": "0855e74caa03",
+      "content": "Q: hello\nA: I thought about it creatively, but didn't find a strong angle.",
       "keywords": [
         "q",
-        "time",
-        "it's",
-        "02:33",
-        "pm"
+        "hello",
+        "thought",
+        "creatively",
+        "didn't",
+        "find",
+        "strong",
+        "angle"
       ],
-      "created_at": 1780151586.084095,
-      "expires_at": 1780237986.084095,
+      "created_at": 1780063501.9630866,
+      "expires_at": 1780149901.9630866,
       "source": "session",
       "metadata": {}
     },
     {
-      "id": "73478ae59764",
-      "content": "Q: open chrome\nA: \u26a1 Action: app_launch \u2192 chrome\nRisk Level: HIGH\nConfirm? (y/n)",
+      "id": "3f319fed2645",
+      "content": "Q: who are you\n[Memory context: Q: hello\nA: I thought about it creatively, but didn't find a strong angle.]\nA: I'm Quarky, your personal AI assistant. I run entirely on your machine \u2014 no cloud, no LLM. I think with two brain hemispheres: analytical for logic and creative for ideas.",
       "keywords": [
         "q",
-        "open",
-        "chrome",
-        "action",
-        "app_launch",
-        "chrome",
-        "risk",
-        "level",
-        "high",
-        "confirm",
-        "y/n"
+        "memory",
+        "context",
+        "q",
+        "hello",
+        "thought",
+        "creatively",
+        "didn't",
+        "find",
+        "strong",
+        "angle",
+        "i'm",
+        "quarky",
+        "personal",
+        "ai",
+        "assistant",
+        "run",
+        "entirely",
+        "machine",
+        "cloud",
+        "llm",
+        "think",
+        "two",
+        "brain",
+        "hemispheres",
+        "analytical",
+        "logic",
+        "creative",
+        "ideas"
       ],
-      "created_at": 1780152213.6579196,
-      "expires_at": 1780238613.6579196,
+      "created_at": 1780063501.98229,
+      "expires_at": 1780149901.98229,
+      "source": "decision.memory_updater",
+      "metadata": {}
+    },
+    {
+      "id": "d1cb4e41ccae",
+      "content": "Q: who are you\nA: I'm Quarky, your personal AI assistant. I run entirely on your machine \u2014 no cloud, no LLM. I think with two brain hemispheres: analytical for logic and creative for ideas.",
+      "keywords": [
+        "q",
+        "i'm",
+        "quarky",
+        "personal",
+        "ai",
+        "assistant",
+        "run",
+        "entirely",
+        "machine",
+        "cloud",
+        "llm",
+        "think",
+        "two",
+        "brain",
+        "hemispheres",
+        "analytical",
+        "logic",
+        "creative",
+        "ideas"
+      ],
+      "created_at": 1780063501.9924057,
+      "expires_at": 1780149901.9924057,
       "source": "session",
       "metadata": {}
     },
     {
-      "id": "5f97ef417392",
+      "id": "55a448e448c4",
+      "content": "Q: cd quantum entanglement banana\nA: I thought about it creatively, but didn't find a strong angle.",
+      "keywords": [
+        "q",
+        "cd",
+        "quantum",
+        "entanglement",
+        "banana",
+        "thought",
+        "creatively",
+        "didn't",
+        "find",
+        "strong",
+        "angle"
+      ],
+      "created_at": 1780063502.0476933,
+      "expires_at": 1780149902.0476933,
+      "source": "decision.memory_updater",
+      "metadata": {}
+    },
+    {
+      "id": "a9f48c330e2d",
+      "content": "Q: xkcd quantum entanglement banana\nA: I thought about it creatively, but didn't find a strong angle.",
+      "keywords": [
+        "q",
+        "xkcd",
+        "quantum",
+        "entanglement",
+        "banana",
+        "thought",
+        "creatively",
+        "didn't",
+        "find",
+        "strong",
+        "angle"
+      ],
+      "created_at": 1780063502.049567,
+      "expires_at": 1780149902.049567,
+      "source": "session",
+      "metadata": {}
+    },
+    {
+      "id": "d7d7237934f5",
       "content": "Q: close it\nA: I thought about it creatively, but didn't find a strong angle.",
       "keywords": [
         "q",
@@ -64,14 +159,34 @@
         "strong",
         "angle"
       ],
-      "created_at": 1780152213.6592553,
-      "expires_at": 1780238613.6592553,
+      "created_at": 1780141951.3613305,
+      "expires_at": 1780228351.3613305,
+      "source": "session",
+      "metadata": {}
+    },
+    {
+      "id": "ab502c161515",
+      "content": "Q: the answer is 42\nA: I understand this relates to: answer, 42. Could you tell me what you'd like me to do with it?",
+      "keywords": [
+        "q",
+        "answer",
+        "42",
+        "understand",
+        "relates",
+        "answer",
+        "42",
+        "tell",
+        "you'd",
+        "like"
+      ],
+      "created_at": 1780141951.3616605,
+      "expires_at": 1780228351.3616605,
       "source": "session",
       "metadata": {}
     }
   ],
   "_meta": {
     "description": "Temporary memory \u2014 auto-expiring entries",
-    "count": 4
+    "count": 8
   }
 }

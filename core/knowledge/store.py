@@ -162,4 +162,7 @@ class KnowledgeStore:
     @staticmethod
     def _make_id(text: str) -> str:
         import hashlib
-        return hashlib.sha1(text.strip().lower().encode("utf-8")).hexdigest()[:16]
+        # Non-security identifier; blake2b is fast and modern.
+        return hashlib.blake2b(
+            text.strip().lower().encode("utf-8"), digest_size=8
+        ).hexdigest()

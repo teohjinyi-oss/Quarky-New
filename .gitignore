@@ -1,2 +1,8 @@
 Migration/java-shell/nul
 nul
+
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
